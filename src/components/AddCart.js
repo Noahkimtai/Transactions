@@ -2,7 +2,7 @@ import React from "react";
 
 function AddCart({cart, handleAddCart}){
     return(
-        <div>
+        <div className="section">
             <h2>Cart</h2>
             {cart.map(prod => {return(
             <>

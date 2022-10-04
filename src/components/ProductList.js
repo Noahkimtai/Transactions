@@ -16,12 +16,13 @@ function ProductList(){
     const filteredData = products.filter(el =>el.description.includes(searchDescription))
     setProducts(filteredData)
   };
-  
 
     return(
-        <div>
+        <div className="section"> 
             <Search searchLogic={searchLogic} />
-            {products.map(product => <Product className ='wrapper' key={product.id}  product={product}/>)}
+            <div className ='wrapper'> 
+                {products.map(product => <Product key={product.id}  product={product}/>)}
+            </div>
             <AddCart cart = {cart} />
         </div>
     );

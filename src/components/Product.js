@@ -5,7 +5,7 @@ function Product({product}){
     const [rating,setRating] = useState(product.rating.rate)
     return (
     <div className="wrapper">
-        <div>
+        <div className="section">
             <img src={product.image} alt={product.id} className="img-responsive"></img>
             <button onClick={(e)=>{setRating(() =>rating+0.1)}}>like</button>
             <button onClick={e =>{setRating(() =>rating-0.1)}}>dislike</button>

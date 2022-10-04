@@ -17,7 +17,7 @@ function Search({searchLogic}){
 
 
     return (
-        <div>
+        <div className="section">
             <input type='text' placeholder="Search using category" onChange={handleSearch}></input>
         </div>
     );

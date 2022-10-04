@@ -8,6 +8,9 @@ img{
 }
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2em;
+  grid-template-columns: repeat(5, 1fr);
+  /* gap: 10em; */
+}
+.section {
+  padding: 10px;
 }
