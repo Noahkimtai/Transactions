@@ -5,25 +5,24 @@ import Search from "./Search";
 
 function ProductList(){
     const [products, setProducts] = useState([]);
-    const [search, setSearch] =useState('')
     const [cart, setCart] = useState([])
     useEffect(()=>{
         fetch('https://fakestoreapi.com/products').then(res => res.json())
         .then(data =>setProducts(data));
     },[])
-   function handleSearch(e){
-        e.preventDefault()
-        setSearch(e.target.value)
-        alert(e.target.value)
-        const filteredProducts = products.filter(product =>product.category.includes(e.target.value));
-        setProducts(filteredProducts)
-    }
+
+  // function to filter the data based on the search
+  function searchLogic(searchDescription){
+    const filteredData = products.filter(el =>el.description.includes(searchDescription))
+    setProducts(filteredData)
+  };
+  
 
     return(
         <div>
-            <Search handleSearch = {handleSearch}/>
+            <Search searchLogic={searchLogic} />
             <Product product={products}/>
-             <AddCart cart = {cart} />
+            <AddCart cart = {cart} />
         </div>
     );
 }
