@@ -3,12 +3,12 @@
   background-color: #F5F5F5;
 }
 
-img{
+ img{
   max-width: 100%;
 }
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   /* gap: 10em; */
 }
 .section {
