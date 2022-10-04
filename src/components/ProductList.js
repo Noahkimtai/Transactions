@@ -21,7 +21,7 @@ function ProductList(){
     return(
         <div>
             <Search searchLogic={searchLogic} />
-            <Product product={products}/>
+            {products.map(product => <Product className ='wrapper' key={product.id}  product={product}/>)}
             <AddCart cart = {cart} />
         </div>
     );

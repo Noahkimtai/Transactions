@@ -1,17 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Product({product}){
+    //create state to hold the rating
+    const [rating,setRating] = useState(product.rating.rate)
     return (
-        <div className="wrapper">
-            {product.map(prod => {return(
-            <div key={prod.id}>
-                <img src={prod.image} alt={prod.id} className="img-responsive"></img>
-                <button>Add to Cart</button> 
-                <h3>Price: {prod.price} <span>Rating:{prod.rating.rate}</span></h3> 
-            </div>
-           
-            )})}
+    <div className="wrapper">
+        <div>
+            <img src={product.image} alt={product.id} className="img-responsive"></img>
+            <button onClick={(e)=>{setRating(() =>rating+0.1)}}>like</button>
+            <button onClick={e =>{setRating(() =>rating-0.1)}}>dislike</button>
+            <button>Add to Cart</button> 
+            <h3>Price: {product.price} <span>Rating:{rating}</span></h3> 
         </div>
+    </div>
+
     );
 }
 export default Product;
