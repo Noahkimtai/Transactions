@@ -2,8 +2,8 @@ import React from "react";
 
 function AddCart({cart, handleAddCart}){
     return(
-        <div className="section">
-            <h2>Cart</h2>
+        <div className="wrapper">
+            <h2>My Cart</h2>
             {cart.map(prod => {return(
             <>
                 <img key={prod.id} src={prod.image} alt={prod.id} className="img-responsive"></img> 
