@@ -9,8 +9,8 @@ function Product({product}){
             <img src={product.image} alt={product.id} className="img-responsive"></img>
             <button onClick={(e)=>{setRating(() =>rating+0.1)}}>like</button>
             <button onClick={e =>{setRating(() =>rating-0.1)}}>dislike</button>
-            <button>Add to Cart</button> 
-            <h3>Price: {product.price} <span>Rating:{rating}</span></h3> 
+            <button>Buy</button> 
+            <p>Price: {product.price} <span>Rating:{rating}</span></p> 
         </div>
     </div>
 

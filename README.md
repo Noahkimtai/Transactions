@@ -5,7 +5,7 @@ Frontend for a webstore/shop that can be used by small businesses and creatives 
 ### As A user I should be able to:
 1. Explore all the products on the platform.
 1. Filter products based on category.
-1. Add a comment to a product and a review.
+1. Add a comment to a product a review.
 1. Add a product for others to view.
 1. Add to cart a product.
 

@@ -2,13 +2,17 @@
   text-align: center;
   background-color: #F5F5F5;
 }
+button{
+  size: small;
+  font-size: x-small;
+}
 
  img{
   max-width: 100%;
 }
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   /* gap: 10em; */
 }
 .section {
