@@ -9,7 +9,7 @@ function AddCart({cart, handleAddCart,count}){
             <div>
                 <img key={prod.id} src={prod.image} alt={prod.id} className="img-responsive"></img> 
                 <h5>Price: {prod.price} <span>Rating:{prod.rating.rate}</span></h5>
-                <button>description</button>
+                <button onClick={(e)=>alert(`${prod.description}`)}>description</button>
                 <p>{prod.title}</p>
             </div>
         )})}
