@@ -3,7 +3,7 @@ import React from "react";
 function AddCart({cart, handleAddCart,count}){
     return(
         <>
-        <h2>My Cart <span>{count}</span></h2>
+        <h2>My Cart <span>{count} Items</span></h2>
         <div className="wrapper">
             {cart.map(prod => {return(
             <div>

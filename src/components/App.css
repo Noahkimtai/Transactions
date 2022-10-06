@@ -3,12 +3,18 @@
   text-align: center;
   background-color: #F5F5F5;
 }
+.NavBar{
+  float: left;
+}
 button{
-  size: small;
-  font-size: x-small;
+  size: medium;
+  font-size: small;
 }
 .star{
   color:orange;
+}
+.input{
+  padding: 8px;
 }
 #about{
   background-color: darkolivegreen;

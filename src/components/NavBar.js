@@ -3,9 +3,8 @@ import { NavLink } from "react-router-dom";
 
 const linkStyles = {
   display: "inline-block",
-  width: "60px",
   padding: "12px",
-  margin: "0 6px 6px",
+  margin: "0 6px 0",
   background: "grey",
   textDecoration: "none",
   color: "white",
@@ -14,7 +13,7 @@ const linkStyles = {
 
 function NavBar() {
   return (
-    <div className="section">
+    <div className="NavBar">
       <NavLink
         to="/"
         exact

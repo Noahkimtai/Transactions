@@ -18,15 +18,14 @@ function Search({searchLogic,handleFilter}){
 
     return (
         <div className="section">
-            <input type='text' placeholder="Search using product name" onChange={handleSearch}></input>
-
-            <label for="cars">Select by Category:</label>
-
-            <select onChange={handleFilter}name="products" id="products">
+              <input  type='text' placeholder="Search using product name" onChange={handleSearch}></input>
+              <label for="cars">Filter by Category:</label>
+            
+            <select onChange={handleFilter}name="products" id="products" className="input">
              <option value="all">All</option>
               <option value="electronics">Electronics</option>
               <option value="men's clothing">Mens clothing</option>
-              <option value="Jewelery">Jewelery</option>
+              <option value="jewelery">Jewelery</option>
               <option value="women's clothing">Women's clothing</option>
             </select>
         </div>

@@ -22,7 +22,7 @@ function Product({product, addToCart}){
             <img src={product.image} alt={product.id} className="img-responsive"></img>
             <button className ='star' onClick={(e)=>{setRating((rating) =>rating+0.1);
             setRateCount((rateCount) =>rateCount+1)}}>★</button>
-            <button onClick={()=>addToCart(product.id)}>Buy</button> 
+            <button onClick={()=>addToCart(product.id)}>Add to Cart</button> 
             <p>Ksh: {product.price} Rating:{rating}</p> 
         </div>
     </div>
