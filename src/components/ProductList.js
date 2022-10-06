@@ -13,7 +13,7 @@ function ProductList(){
 
   // function to filter the data based on the search
   function searchLogic(searchDescription){
-    const filteredData = products.filter(el =>el.description.includes(searchDescription))
+    const filteredData = products.filter(el =>el.title.includes(searchDescription))
     setProducts(filteredData)
   };
 

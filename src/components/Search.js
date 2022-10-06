@@ -18,7 +18,17 @@ function Search({searchLogic}){
 
     return (
         <div className="section">
-            <input type='text' placeholder="Search using category" onChange={handleSearch}></input>
+            <input type='text' placeholder="Search using product name" onChange={handleSearch}></input>
+
+            <label for="cars">Select by Category:</label>
+
+            <select name="products" id="products">
+             <option value="all">All</option>
+              <option value="lectronic">Electronic</option>
+              <option value="men's clothing">Men</option>
+              <option value="Jewelery">Jewelery</option>
+              <option value="women's clothing">women's clothing</option>
+            </select>
         </div>
     );
 }
