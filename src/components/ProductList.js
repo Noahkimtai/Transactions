@@ -28,12 +28,12 @@ function ProductList(){
     setCart((cart) => cart.concat(filteredData))
     setCount((count) =>count +1)
   }
-
-    return(
+ 
+  return(
         <div className="section"> 
             <Search searchLogic={searchLogic} handleFilter ={handleFilter} />
             <div className ='wrapper'> 
-                {products.map(product => <Product key={product.id}  product={product} addToCart ={addToCart}/>)}
+                {products.map(product => <Product className ="wrapper" key={product.id}  product={product} addToCart ={addToCart}/>)}
             </div>
             <AddCart cart = {cart} count ={count}/>
             <About />

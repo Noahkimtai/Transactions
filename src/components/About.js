@@ -1,6 +1,6 @@
 import React from "react";
 
-function AddProduct(){
+function About(){
     return (
         <div className="section" id="about">
             <h3>About</h3>
@@ -11,4 +11,4 @@ function AddProduct(){
         </div>
     );
 }
-export default AddProduct;
+export default About;

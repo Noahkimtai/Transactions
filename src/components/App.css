@@ -10,6 +10,9 @@ button{
 .star{
   color:orange;
 }
+#about{
+  background-color: darkolivegreen;
+}
 
  img{
   max-width: 100%;
@@ -18,6 +21,7 @@ button{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 1rem;
+  background-color: whitesmoke;
 }
 .section {
   padding: 10px;
