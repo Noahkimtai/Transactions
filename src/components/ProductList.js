@@ -7,6 +7,7 @@ import About from './About'
 function ProductList(){
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([])
+    const [count, setCount] = useState(0)
     useEffect(()=>{
         fetch('https://fakestoreapi.com/products').then(res => res.json())
         .then(data =>setProducts(data));
@@ -25,6 +26,7 @@ function ProductList(){
   function addToCart(id){
     const filteredData = products.filter(el =>el.id ===id)
     setCart((cart) => cart.concat(filteredData))
+    setCount((count) =>count +1)
   }
 
     return(
@@ -33,7 +35,7 @@ function ProductList(){
             <div className ='wrapper'> 
                 {products.map(product => <Product key={product.id}  product={product} addToCart ={addToCart}/>)}
             </div>
-            <AddCart cart = {cart} />
+            <AddCart cart = {cart} count ={count}/>
             <About />
         </div>
     );
