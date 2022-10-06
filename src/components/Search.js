@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 
-function Search({searchLogic}){
+function Search({searchLogic,handleFilter}){
     // create a state for holding search data
     const [searchDescription,setSearchDescription] = useState('')
 
@@ -22,12 +22,12 @@ function Search({searchLogic}){
 
             <label for="cars">Select by Category:</label>
 
-            <select name="products" id="products">
+            <select onChange={handleFilter}name="products" id="products">
              <option value="all">All</option>
-              <option value="lectronic">Electronic</option>
-              <option value="men's clothing">Men</option>
+              <option value="electronics">Electronics</option>
+              <option value="men's clothing">Mens clothing</option>
               <option value="Jewelery">Jewelery</option>
-              <option value="women's clothing">women's clothing</option>
+              <option value="women's clothing">Women's clothing</option>
             </select>
         </div>
     );

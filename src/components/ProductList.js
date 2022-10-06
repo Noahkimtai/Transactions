@@ -2,6 +2,7 @@ import React, {useState,useEffect} from "react";
 import AddCart from "./AddCart";
 import Product from "./Product";
 import Search from "./Search";
+import About from './About'
 
 function ProductList(){
     const [products, setProducts] = useState([]);
@@ -17,13 +18,19 @@ function ProductList(){
     setProducts(filteredData)
   };
 
+  function handleFilter(e){
+    const filteredData = products.filter(el =>el.category ===e.target.value)
+    setProducts(filteredData)    
+  }
+
     return(
         <div className="section"> 
-            <Search searchLogic={searchLogic} />
+            <Search searchLogic={searchLogic} handleFilter ={handleFilter} />
             <div className ='wrapper'> 
                 {products.map(product => <Product key={product.id}  product={product}/>)}
             </div>
             <AddCart cart = {cart} />
+            <About />
         </div>
     );
 }
