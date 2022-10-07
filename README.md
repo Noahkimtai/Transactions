@@ -2,6 +2,7 @@
 ## node v16.13.0
 ## API
 Fake Store API https://fakestoreapi.com
+![alt webstore](./public/webstore.png)
 
 Frontend for a webstore/shop that can be used by small businesses and creatives to promote sell their products
 ## User Story

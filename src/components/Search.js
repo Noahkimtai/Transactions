@@ -17,10 +17,10 @@ function Search({searchLogic,handleFilter}){
 
 
     return (
-        <div className="section">
-              <input  type='text' placeholder="Search using product name" onChange={handleSearch}></input>
-              <label for="cars">Filter by Category:</label>
-            
+        <div className="search">
+            <input  type='text' placeholder="Search using product name" onChange={handleSearch}></input>
+              
+            <label for="cars">Filter by Category:</label>
             <select onChange={handleFilter}name="products" id="products" className="input">
              <option value="all">All</option>
               <option value="electronics">Electronics</option>
