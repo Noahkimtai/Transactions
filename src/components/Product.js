@@ -3,6 +3,7 @@ import React, {useState } from "react";
 function Product({product, addToCart}){
     //create state to hold the rating
     const [rating,setRating] = useState(product.rating.rate)
+    // create state to hold the number of people who have rated the product
     const [rateCount, setRateCount] =useState(product.rating.count)
     
     // When the rating changes make a post request to the server to change the rating
