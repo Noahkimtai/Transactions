@@ -6,22 +6,22 @@ function Product({product, addToCart}){
     const [rateCount, setRateCount] =useState(product.rating.count)
     
     // When the rating changes make a post request to the server to change the rating
-/*     useEffect(() =>{
+    function postData(){
         product.rating.rate = rating
         product.rating.count = rateCount
         fetch(`https://fakestoreapi.com/products/${product.id}`,{
             method:'PATCH',
             headers:{'content-Type':'application/json'},
             body:JSON.stringify(product)
-        }).then(res=>res.json())
-        .then(json=>alert(json.id))
-    },[rating]) */
+        })
+    }
+
     return (
     <div>
         <div>
             <img src={product.image} alt={product.id} className="img-responsive"></img>
             <button className ='star' onClick={(e)=>{setRating((rating) =>rating+0.1);
-            setRateCount((rateCount) =>rateCount+1)}}>★</button>
+            setRateCount((rateCount) =>rateCount+1); postData()}}>★</button>
             <button onClick={()=>addToCart(product.id)}>Add to Cart</button> 
             <p>Ksh: {product.price} Rating:{rating}</p> 
         </div>
