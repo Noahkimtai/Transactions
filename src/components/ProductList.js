@@ -3,6 +3,7 @@ import AddCart from "./AddCart";
 import Product from "./Product";
 import Search from "./Search";
 import About from './About'
+import { Route, Routes } from "react-router-dom";
 
 function ProductList(){
     const [products, setProducts] = useState([]);
@@ -35,8 +36,15 @@ function ProductList(){
             <div className ='wrapper'> 
                 {products.map(product => <Product className ="wrapper" key={product.id}  product={product} addToCart ={addToCart}/>)}
             </div>
-            <AddCart cart = {cart} count ={count}/>
-            <About />
+            <Routes>
+              <Route path="/cart" element = { 
+                <AddCart cart = {cart} count ={count}/>}
+              />
+              <Route path="/about" element ={ 
+                <About />
+              }/>
+            </Routes>
+
         </div>
     );
 }
